@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalanathan Narayana Bharathy - Robotics Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #d1d5db;
+        }
+        .section-title {
+            color: #fff;
+            border-bottom: 2px solid #374151;
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .skill-tag {
+            background-color: #374151;
+            color: #d1d5db;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Kamalanathan Narayana Bharathy</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="nav-link text-gray-400">About</a>
+                <a href="#projects" class="nav-link text-gray-400">Projects</a>
+                <a href="#experience" class="nav-link text-gray-400">Experience</a>
+                <a href="#skills" class="nav-link text-gray-400">Skills</a>
+                <a href="#contact" class="nav-link text-gray-400">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-700">Projects</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-700">Experience</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-700">Skills</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="text-center py-20">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Kamalanathan Narayana Bharathy</h1>
+            <p class="text-xl md:text-2xl text-gray-300">Robotics & Autonomy Graduate Student</p>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/kamalanathan-n" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/KamalanathanN" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github fa-2x"></i></a>
+                <a href="mailto:kamal.rkara@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="my-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-6 section-title">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-3/4">
+                    <p class="text-lg leading-relaxed mb-4">
+                        I am a passionate and driven Robotics and Autonomy graduate student at Drexel University with a strong foundation in electronics and communication. My professional experience as a Robotics Software Engineer and intern has allowed me to dive deep into developing autonomous systems, from last-mile delivery robots to reality capture solutions.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        I thrive on the challenges of integrating perception, planning, and control to create intelligent machines. My work involves extensive use of ROS, C++, and Python, and I am always excited to explore the boundaries of sim-to-real transfer and human-robot interaction. This portfolio is a showcase of my journey and the projects I've poured my passion into.
+                    </p>
+                </div>
+                <div class="md:w-1/4 flex justify-center">
+                    <img src="images/profile-photo.jpeg" alt="Kamalanathan Narayana Bharathy" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-gray-700">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="my-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: VLA Integration -->
+                <a href="projects/vla-integration.html" class="project-card rounded-lg overflow-hidden block hover:no-underline">
+                    <img src="images/projects/vla-integration-thumbnail.gif" alt="Visual Language Action Integration" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Visual Language Action (VLA) Integration for Industrial Manipulation</h3>
+                        <p class="text-gray-400 mb-4">Fine-tuning LLaVA-1.6 for real-time visual-language action planning on a 6-DOF industrial manipulator. Integrated outputs with ROS 2 behavior trees.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">C++</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">ROS2</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">PyTorch</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">LLM</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 2: Nue Delivery Robot -->
+                <a href="projects/nue-delivery-robot.html" class="project-card rounded-lg overflow-hidden block hover:no-underline">
+                    <img src="images/projects/nue-delivery-robot-thumbnail.jpeg" alt="Nue Delivery Robot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Nue: Last-mile Delivery Robot</h3>
+                        <p class="text-gray-400 mb-4">Developed a prototype last-mile delivery robot with a rocker-bogie base, evolving from a minimal ROS setup to a functional and aesthetic design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">C++</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">ROS2</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Fusion360</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Docker</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3: Abot Simulation -->
+                <a href="projects/abot-simulation.html" class="project-card rounded-lg overflow-hidden block hover:no-underline">
+                    <img src="images/projects/abot-simulation-thumbnail.gif" alt="Abot Simulation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Abot: Home Automation Simulation</h3>
+                        <p class="text-gray-400 mb-4">Simulation for home automation research with teleop, SLAM, navigation, and coverage planning algorithms using Boustrophedon Decomposition.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">C++</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">ROS1</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Gazebo</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Onshape</span>
+                        </div>
+                    </div>
+                </a>
+                 <!-- Project 4: Custom Robotics Project - Hidden for now -->
+                <!-- <a href="projects/custom-robotics-project.html" class="project-card rounded-lg overflow-hidden block hover:no-underline">
+                    <img src="images/projects/custom-robotics-project-thumbnail.jpeg" alt="Project 4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Custom Robotics Project</h3>
+                        <p class="text-gray-400 mb-4">Description of another one of your amazing robotics projects. Highlight the key challenges and your innovative solutions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">OpenCV</span>
+                            <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">TensorFlow</span>
+                        </div>
+                    </div>
+                </a> -->
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="my-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 section-title">Experience</h2>
+            <div class="space-y-8">
+                <div class="p-6 border-l-4 border-gray-700 bg-gray-900 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-white">Robotics Intern</h3>
+                    <p class="text-gray-400 mb-2">Unlimited Robotics, Inc. | Sep 2024 - Dec 2024</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Operated autonomous delivery robots at Temple University Hospital, completing over 1,200 missions.</li>
+                        <li>Assisted in developing ROS2-based infrastructure modules, reducing developer onboarding time by 30%.</li>
+                    </ul>
+                </div>
+                 <div class="p-6 border-l-4 border-gray-700 bg-gray-900 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-white">Robotics and Reality Capture Intern</h3>
+                    <p class="text-gray-400 mb-2">Robotic Imaging, Inc. | Jun 2024 - Aug 2024</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Co-designed and implemented an Arduino-controlled auto-leveling tribrach, reducing setup time by 50%.</li>
+                        <li>Processed and aligned 3D point clouds from Leica LiDARs for accurate spatial models.</li>
+                    </ul>
+                </div>
+                 <div class="p-6 border-l-4 border-gray-700 bg-gray-900 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-white">Robotics Software Engineer</h3>
+                    <p class="text-gray-400 mb-2">Codelattice Labs Pvt. Ltd. | Apr 2020 - Oct 2022</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Prototyped a 100kg payload autonomous delivery robot with robust navigation.</li>
+                        <li>Designed a behavior tree for multi-point navigation and active battery monitoring.</li>
+                        <li>Led development of fleet management software and an onboard touchscreen UI.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="my-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 section-title">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Languages & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full">C</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">C++</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">MATLAB</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Docker</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">CAD & Simulation</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full">Fusion360</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Onshape</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">PyBullet</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">MuJoCo</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Gazebo</span>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Platforms & Hardware</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full">Linux</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Arduino</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Teensy</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">ESP32</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">NVIDIA Jetson</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Raspberry Pi</span>
+                    </div>
+                </div>
+                 <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                    <h3 class="text-xl font-semibold text-white mb-4">Robotics & Other Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full">ROS1</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">ROS2</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">OMPL</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">MoveIt2</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">micro-ROS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">PyQt</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">PyTorch</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">3D-Printing</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Laser Cutting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-16 text-center scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-4 section-title w-max mx-auto px-4">Get In Touch</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+                I'm currently seeking new opportunities and am open to collaborations. Feel free to reach out if you have a project in mind, a question, or just want to connect!
+            </p>
+            <a href="mailto:kamal.rkara@gmail.com" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-500 transition-colors text-lg">
+                Say Hello
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+             <div class="mb-4 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/kamalanathan-n" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/KamalanathanN" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github fa-lg"></i></a>
+                <a href="mailto:kamal.rkara@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+            <p>&copy; 2024 Kamalanathan Narayana Bharathy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nue Delivery Robot - Kamalanathan Narayana Bharathy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #d1d5db;
+        }
+        .skill-tag {
+            background-color: #374151;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Project Header -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Nue: Last-mile Delivery Robot</h1>
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">C++</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">ROS2</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">Fusion360</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">Docker</span>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="max-w-4xl mx-auto">
+            <!-- Project Image -->
+            <div class="mb-8">
+                <img src="../images/projects/nue-delivery-robot-detail.jpeg" alt="Nue Delivery Robot" class="w-full rounded-lg">
+            </div>
+
+            <!-- Project Description -->
+            <div class="prose prose-invert max-w-none">
+                <h2 class="text-2xl font-bold text-white mb-4">Project Overview</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Nue is a last-mile delivery robot prototype that underwent an extensive evolution from a minimal working ROS robot to a sophisticated autonomous delivery system. The development process showcased iterative design improvements, extensive testing, and integration of advanced robotics technologies for real-world delivery applications.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Development Evolution</h2>
+                
+                <h3 class="text-xl font-semibold text-white mb-3">Phase 1: Minimal Working Robot</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    The prototype started with creating a minimal working ROS robot, establishing the foundation for basic mobility and control systems.
+                </p>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Phase 2: Wooden Prototype</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    The design evolved into a wooden robot similar to TurtleBot2, incorporating improved structural elements and enhanced functionality for indoor navigation and testing.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/hBUmZOW5AAo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Phase 3: High-Payload BLDC Integration</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    The next prototype focused on increasing payload capacity by integrating high-torque BLDC motors. A depth camera was added to experiment with outdoor navigation capabilities, significantly expanding the robot's operational envelope.
+                </p>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Phase 4: Rocker-Bogie Suspension</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Having experimented with a rocker-bogie base for the Agrobot project, the team integrated the same suspension system within the base design. This implementation maintained good aesthetics while providing superior terrain adaptability inspired by Mars rover designs.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/nRtr4BOitpY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Phase 5: Sensor Integration & Testing</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    With the new base approaching the final product design, comprehensive testing was conducted with the complete sensor suite including LiDAR, Intel RealSense camera, IMU, and wheel odometry with EKF sensor fusion for robust localization.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/fEuBJakph3I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Technical Implementation</h2>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>Custom rocker-bogie suspension system for terrain adaptability</li>
+                    <li>High-torque BLDC motors for increased payload capacity</li>
+                    <li>Multi-sensor fusion: LiDAR, Intel RealSense, IMU, wheel odometry</li>
+                    <li>Extended Kalman Filter (EKF) for robust state estimation</li>
+                    <li>RTAB-Map for simultaneous localization and mapping</li>
+                    <li>TEB (Timed Elastic Band) planner for dynamic path planning</li>
+                    <li>ROS-based architecture for modular development</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Navigation & Autonomy</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    The robot underwent extensive parameter tuning to achieve reliable autonomous navigation. The implementation included RTAB-Map for real-time mapping and localization, combined with the TEB planner for smooth trajectory generation and dynamic obstacle avoidance. This combination enabled the robot to operate effectively in both indoor and outdoor environments.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-white mb-3">RTAB-Map and TEB Planner Testing</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    First test with RTAB-Map and TEB planner after extensive parameter tuning sessions, demonstrating successful autonomous navigation capabilities.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/7gvs0mqKwdU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Testing & Validation</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Comprehensive testing phases included:
+                </p>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>Sensor fusion validation and calibration</li>
+                    <li>Autonomous navigation testing with RTAB-Map and TEB planner</li>
+                    <li>Real-world test drives in various environments</li>
+                    <li>Complete delivery demonstrations showcasing end-to-end functionality</li>
+                    <li>Performance comparison between CAD renders and physical implementation</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Test Drive</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Real-world testing demonstration showcasing the robot's autonomous navigation capabilities in outdoor environments.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/2y7okmMbwQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Delivery Demonstration</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Complete end-to-end delivery demonstration showcasing the robot's ability to autonomously navigate to destinations and complete delivery tasks.
+                </p>
+                <div class="mb-6">
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/4Zew99j6rI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Results & Achievements</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    The Nue delivery robot successfully demonstrated:
+                </p>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>Successful evolution from concept to functional prototype</li>
+                    <li>Robust autonomous navigation in diverse environments</li>
+                    <li>Effective payload delivery capabilities</li>
+                    <li>Integration of multiple sensor modalities for reliable operation</li>
+                    <li>Aesthetic design maintaining functional excellence</li>
+                    <li>Complete delivery workflow from pickup to drop-off</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2024 Kamalanathan Narayana Bharathy. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

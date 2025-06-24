@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abot Simulation - Kamalanathan Narayana Bharathy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #d1d5db;
+        }
+        .skill-tag {
+            background-color: #374151;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Project Header -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Abot: Home Automation Simulation</h1>
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">C++</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">ROS1</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">Gazebo</span>
+                <span class="skill-tag text-sm font-semibold px-3 py-1 rounded-full">Onshape</span>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="max-w-4xl mx-auto">
+            <!-- Project Description -->
+            <div class="prose prose-invert max-w-none">
+                <h2 class="text-2xl font-bold text-white mb-4">Project Overview</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    ABot is a differential drive mobile robot based on Robot Operating System (ROS), designed as a comprehensive home automation simulation platform for research and development of autonomous cleaning and maintenance robots. The project has been tested on Ubuntu 18.04 with ROS Melodic and Ubuntu 20.04 with ROS Noetic, providing a complete virtual environment for testing navigation algorithms, SLAM implementations, and coverage planning strategies using advanced computational geometry techniques.
+                </p>
+                
+                <!-- GitHub Button -->
+                <div class="mb-8 flex justify-center">
+                    <a href="https://github.com/KamalanathanN/abot" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full transition-colors inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Capabilities & Features</h2>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-model-depth.gif" alt="ABot 3D Model and Depth Analysis" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">ABot 3D model with depth sensor analysis in Gazebo simulation</p>
+                </div>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>✅ Manual teleop control for direct robot operation</li>
+                    <li>✅ SLAM with Gmapping using teleop and explore_lite</li>
+                    <li>✅ Goal Point Navigation using dwa_local_planner and teb_local_planner</li>
+                    <li>✅ Coverage Planning with Boustrophedon Decomposition</li>
+                    <li>✅ Configured Behavior Tree for complex task management</li>
+                    <li>✅ Intel RealSense D435 integration</li>
+                    <li>✅ RTAB-Map for advanced SLAM capabilities</li>
+                    <li>🔄 GPS integration (planned)</li>
+                    <li>🔄 Manipulator arm addition (planned)</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Installation & Setup</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    To run the ABot simulation in Gazebo, clone the package in your catkin workspace:
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>cd ~/catkin_ws/src
+git clone https://github.com/KamalanathanN/abot.git
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash</code></pre>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Launch ABot in Gazebo</h3>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_gazebo robot_house_gazebo.launch</code></pre>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Core Functionalities</h2>
+
+                <h3 class="text-xl font-semibold text-white mb-3">1. SLAM with Gmapping</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    ABot supports simultaneous localization and mapping using gmapping algorithm with both manual teleop control and autonomous exploration.
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_slam abot_gmapping.launch
+roslaunch abot_teleop abot_teleop_key.launch</code></pre>
+                </div>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-slam-gmapping.gif" alt="ABot SLAM with Gmapping" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">Real-time SLAM mapping using gmapping algorithm</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">2. Autonomous Exploration with explore_lite</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    For autonomous map generation without manual intervention:
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>sudo apt install ros-noetic-explore-lite
+
+roslaunch abot_slam abot_gmapping.launch
+roslaunch abot_navigation move_base.launch
+roslaunch explore_lite explore.launch</code></pre>
+                </div>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-explore-lite.gif" alt="ABot Autonomous Exploration" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">Autonomous exploration and mapping using explore_lite</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">3. Navigation System</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    The navigation system supports both DWA and TEB local planners. By default, it uses dwa_local_planner, but TEB can be enabled with the TEB:=true argument.
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_navigation abot_navigation.launch</code></pre>
+                </div>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-navigation-demo.gif" alt="ABot Navigation System" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">Goal-based navigation with obstacle avoidance</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">4. Path Coverage with Boustrophedon Decomposition</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Advanced coverage planning algorithm for systematic area coverage:
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_path_coverage abot_path_coverage.launch</code></pre>
+                </div>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-coverage-planning.gif" alt="ABot Coverage Planning" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">Boustrophedon decomposition for complete area coverage</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Behavior Tree Integration</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    ABot features a sophisticated behavior tree system for complex task management. The implementation includes goal point looping with interrupt capabilities for autonomous charging behavior. Future enhancements will include camera feedback actions and object detection behaviors.
+                </p>
+                <div class="mb-8">
+                    <video controls class="w-full rounded-lg shadow-lg">
+                        <source src="../videos/abot-behavior-tree-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="text-sm text-gray-400 mt-2 text-center">Behavior tree execution with Groot monitoring interface</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Runtime Behavior Tree Monitoring with Groot</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Real-time visualization and monitoring of behavior tree execution:
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>rosrun groot Groot # select Monitor option and Start
+roslaunch abot_behavior_tree goal_points_looping.launch</code></pre>
+                </div>
+
+                <p class="text-lg leading-relaxed mb-4">
+                    To provide interrupt commands:
+                </p>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>rostopic pub /interrupt_event std_msgs/String "data: 'Charge_port'"</code></pre>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">RTAB-Map Integration</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Advanced SLAM capabilities using RTAB-Map for robust mapping and localization in complex environments. The system integrates Intel RealSense D435 for enhanced depth perception.
+                </p>
+                <div class="mb-8">
+                    <img src="../images/projects/abot-rtabmap-demo.gif" alt="ABot RTAB-Map SLAM" class="w-full rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-400 mt-2 text-center">RTAB-Map SLAM with RealSense D435 depth integration</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Mapping Phase</h3>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_rtabmap rtab_minimal.launch args:="--delete_db_on_start"</code></pre>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-3">Navigation with RTAB-Map</h3>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <pre class="text-green-400"><code>roslaunch abot_rtabmap rtab_minimal.launch localization:=true
+roslaunch abot_navigation abot_navigation_rtabmap.launch TEB:=true</code></pre>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Technical Implementation</h2>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>Differential drive mobile robot platform</li>
+                    <li>ROS-based modular architecture</li>
+                    <li>Gazebo simulation environment with realistic physics</li>
+                    <li>Multiple SLAM implementations (Gmapping, RTAB-Map)</li>
+                    <li>Advanced path planning algorithms (DWA, TEB)</li>
+                    <li>Behavior tree framework for complex task management</li>
+                    <li>Intel RealSense D435 sensor integration</li>
+                    <li>Coverage planning using computational geometry</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-white mb-4">Results & Applications</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    The ABot simulation platform has successfully demonstrated:
+                </p>
+                <ul class="list-disc list-inside space-y-2 mb-6 text-gray-300">
+                    <li>Robust autonomous navigation in complex indoor environments</li>
+                    <li>Efficient coverage planning for cleaning applications</li>
+                    <li>Successful integration of multiple sensor modalities</li>
+                    <li>Advanced behavior tree implementation for task management</li>
+                    <li>Educational platform for robotics research and development</li>
+                    <li>Foundation for real-world autonomous system deployment</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2024 Kamalanathan Narayana Bharathy. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
